@@ -25,6 +25,13 @@ protocol HomeDisplaying: AnyObject {
 final class HomeViewController: UIViewController {
     private let interactor: HomeInteracting
     
+    lazy var image: UIImageView = {
+        let image = UIImage(named: "img-bubbles")
+        let imageView = UIImageView(image: image)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
     init(interactor: HomeInteracting) {
         self.interactor = interactor
         super.init(nibName: nil, bundle: nil)
@@ -38,6 +45,15 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         interactor.initialFetch()
+        
+        view.backgroundColor = .white
+        view.addSubview(image)
+        NSLayoutConstraint.activate([
+            image.topAnchor.constraint(equalTo: view.topAnchor),
+            image.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            image.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            image.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+        ])
         
         print("viewDidLoad") // 2# acontece uma unica vez. Na primeira vez que vai abrir uma tela
     }
