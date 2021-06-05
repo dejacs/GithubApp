@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+class HomePresenter {
+    // Responsavel pela formatacao da viewController, diz como deve ser apresentado
+    
+    var viewController: HomeViewController?
+    var coordinator: HomeCoordinator
+    
+    init(coordinator: HomeCoordinator) {
+        self.coordinator = coordinator
+    }
+}

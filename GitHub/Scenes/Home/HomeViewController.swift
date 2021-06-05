@@ -8,7 +8,25 @@
 import Foundation
 import UIKit
 
+// nao deve ter nenhuma logica. NENHUMA. sem ifs, for, foreach, switch case
+
+// Controladores de Acesso - Access Control
+// filePrivate - acessado somente dentro do arquivo
+// open - pode ser herdado e sobrescrito em qualquer lugar
+// internal - pode ser acessado somente dentro do modulo
+// public - pode ser acessado mas nao herdado e sobrescrito em qualquer lugar
+// private - pode ser acessado somente dentro da classe
+
 class HomeViewController: UIViewController {
+    private let interactor: HomeInteractor
+    
+    init(interactor: HomeInteractor) {
+        self.interactor = interactor
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) { nil }
+    
     override func loadView() { // 1# Quase nunca irei usar. a view vai estar nula e pode associar um view customizada para view atual
         print("loadView")
     }
