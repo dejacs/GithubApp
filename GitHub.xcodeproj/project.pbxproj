@@ -16,6 +16,12 @@
 		1D41ABD9266BF450001226FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D41ABD7266BF450001226FF /* LaunchScreen.storyboard */; };
 		1D41ABE4266BF450001226FF /* GitHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D41ABE3266BF450001226FF /* GitHubTests.swift */; };
 		1D41ABEF266BF450001226FF /* GitHubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D41ABEE266BF450001226FF /* GitHubUITests.swift */; };
+		1D41AC02266BF865001226FF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D41AC01266BF865001226FF /* HomeViewController.swift */; };
+		1D41AC0A266BF86F001226FF /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D41AC09266BF86F001226FF /* HomeFactory.swift */; };
+		1D41AC0F266BF8C4001226FF /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D41AC0E266BF8C4001226FF /* HomeInteractor.swift */; };
+		1D41AC14266BF8DF001226FF /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D41AC13266BF8DF001226FF /* HomePresenter.swift */; };
+		1D41AC19266BF8F7001226FF /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D41AC18266BF8F7001226FF /* HomeService.swift */; };
+		1D41AC1E266BF93F001226FF /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D41AC1D266BF93F001226FF /* HomeCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,12 @@
 		1D41ABEA266BF450001226FF /* GitHubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D41ABEE266BF450001226FF /* GitHubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUITests.swift; sourceTree = "<group>"; };
 		1D41ABF0266BF450001226FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D41AC01266BF865001226FF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1D41AC09266BF86F001226FF /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
+		1D41AC0E266BF8C4001226FF /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		1D41AC13266BF8DF001226FF /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		1D41AC18266BF8F7001226FF /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		1D41AC1D266BF93F001226FF /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +113,7 @@
 		1D41ABC8266BF44F001226FF /* GitHub */ = {
 			isa = PBXGroup;
 			children = (
+				1D41ABFF266BF80D001226FF /* Scenes */,
 				1D41ABC9266BF44F001226FF /* AppDelegate.swift */,
 				1D41ABCB266BF44F001226FF /* SceneDelegate.swift */,
 				1D41ABCD266BF44F001226FF /* ViewController.swift */,
@@ -129,6 +142,27 @@
 				1D41ABF0266BF450001226FF /* Info.plist */,
 			);
 			path = GitHubUITests;
+			sourceTree = "<group>";
+		};
+		1D41ABFF266BF80D001226FF /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				1D41AC00266BF816001226FF /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		1D41AC00266BF816001226FF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1D41AC01266BF865001226FF /* HomeViewController.swift */,
+				1D41AC09266BF86F001226FF /* HomeFactory.swift */,
+				1D41AC0E266BF8C4001226FF /* HomeInteractor.swift */,
+				1D41AC13266BF8DF001226FF /* HomePresenter.swift */,
+				1D41AC18266BF8F7001226FF /* HomeService.swift */,
+				1D41AC1D266BF93F001226FF /* HomeCoordinator.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +295,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D41AC02266BF865001226FF /* HomeViewController.swift in Sources */,
 				1D41ABCE266BF44F001226FF /* ViewController.swift in Sources */,
 				1D41ABCA266BF44F001226FF /* AppDelegate.swift in Sources */,
 				1D41ABD4266BF44F001226FF /* GitHub.xcdatamodeld in Sources */,
 				1D41ABCC266BF44F001226FF /* SceneDelegate.swift in Sources */,
+				1D41AC0A266BF86F001226FF /* HomeFactory.swift in Sources */,
+				1D41AC19266BF8F7001226FF /* HomeService.swift in Sources */,
+				1D41AC1E266BF93F001226FF /* HomeCoordinator.swift in Sources */,
+				1D41AC0F266BF8C4001226FF /* HomeInteractor.swift in Sources */,
+				1D41AC14266BF8DF001226FF /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
