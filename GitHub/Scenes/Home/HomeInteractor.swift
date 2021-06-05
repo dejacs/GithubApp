@@ -10,6 +10,7 @@ import Foundation
 
 protocol HomeInteracting {
     func initialFetch()
+    func fetchDetails(indexPath: IndexPath)
 }
 
 final class HomeInteractor {
@@ -34,5 +35,10 @@ extension HomeInteractor: HomeInteracting {
                 self.presenter.presentError()
             }
         }
+    }
+    
+    func fetchDetails(indexPath: IndexPath) {
+        let repositoryId = repositories[indexPath.row].id
+        presenter.presentDetails(repositoryId: repositoryId)
     }
 }

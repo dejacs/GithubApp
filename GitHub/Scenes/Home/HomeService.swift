@@ -16,15 +16,16 @@ protocol HomeServicing {
 }
 
 struct Repository: Decodable {
+    let id: Int
     let name: String
     let htmlUrl: String
     let description: String?
 }
 
 final class HomeService: HomeServicing {
-    let apiURL = "https://api.github.com/users/alexavier20/repos"
-    
     func fetch(completion: @escaping ((Result<[Repository], APIError>) -> Void)) {
+        let apiURL = "https://api.github.com/users/alexavier20/repos"
+        
         guard let api = URL(string: apiURL) else {
             return
         }

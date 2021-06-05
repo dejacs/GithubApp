@@ -22,6 +22,12 @@
 		1D41AC14266BF8DF001226FF /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D41AC13266BF8DF001226FF /* HomePresenter.swift */; };
 		1D41AC19266BF8F7001226FF /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D41AC18266BF8F7001226FF /* HomeService.swift */; };
 		1D41AC1E266BF93F001226FF /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D41AC1D266BF93F001226FF /* HomeCoordinator.swift */; };
+		1D41AC2F266C3CB1001226FF /* RepositoryDetailsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D41AC2E266C3CB1001226FF /* RepositoryDetailsFactory.swift */; };
+		1D41AC37266C3CF8001226FF /* RepositoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D41AC36266C3CF8001226FF /* RepositoryDetailsViewController.swift */; };
+		1D41AC3C266C3D0B001226FF /* RepositoryDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D41AC3B266C3D0B001226FF /* RepositoryDetailsInteractor.swift */; };
+		1D41AC41266C3D1E001226FF /* RepositoryDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D41AC40266C3D1E001226FF /* RepositoryDetailsPresenter.swift */; };
+		1D41AC46266C3D31001226FF /* RepositoryDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D41AC45266C3D31001226FF /* RepositoryDetailsCoordinator.swift */; };
+		1D41AC4B266C410B001226FF /* RepositoryDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D41AC4A266C410B001226FF /* RepositoryDetailsService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +69,12 @@
 		1D41AC13266BF8DF001226FF /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		1D41AC18266BF8F7001226FF /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		1D41AC1D266BF93F001226FF /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		1D41AC2E266C3CB1001226FF /* RepositoryDetailsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsFactory.swift; sourceTree = "<group>"; };
+		1D41AC36266C3CF8001226FF /* RepositoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsViewController.swift; sourceTree = "<group>"; };
+		1D41AC3B266C3D0B001226FF /* RepositoryDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsInteractor.swift; sourceTree = "<group>"; };
+		1D41AC40266C3D1E001226FF /* RepositoryDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsPresenter.swift; sourceTree = "<group>"; };
+		1D41AC45266C3D31001226FF /* RepositoryDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsCoordinator.swift; sourceTree = "<group>"; };
+		1D41AC4A266C410B001226FF /* RepositoryDetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +159,7 @@
 		1D41ABFF266BF80D001226FF /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				1D41AC2D266C3C97001226FF /* RepositoryDetails */,
 				1D41AC00266BF816001226FF /* Home */,
 			);
 			path = Scenes;
@@ -163,6 +176,19 @@
 				1D41AC1D266BF93F001226FF /* HomeCoordinator.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		1D41AC2D266C3C97001226FF /* RepositoryDetails */ = {
+			isa = PBXGroup;
+			children = (
+				1D41AC2E266C3CB1001226FF /* RepositoryDetailsFactory.swift */,
+				1D41AC36266C3CF8001226FF /* RepositoryDetailsViewController.swift */,
+				1D41AC3B266C3D0B001226FF /* RepositoryDetailsInteractor.swift */,
+				1D41AC40266C3D1E001226FF /* RepositoryDetailsPresenter.swift */,
+				1D41AC45266C3D31001226FF /* RepositoryDetailsCoordinator.swift */,
+				1D41AC4A266C410B001226FF /* RepositoryDetailsService.swift */,
+			);
+			path = RepositoryDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,10 +321,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D41AC4B266C410B001226FF /* RepositoryDetailsService.swift in Sources */,
 				1D41AC02266BF865001226FF /* HomeViewController.swift in Sources */,
+				1D41AC2F266C3CB1001226FF /* RepositoryDetailsFactory.swift in Sources */,
 				1D41ABCE266BF44F001226FF /* ViewController.swift in Sources */,
+				1D41AC46266C3D31001226FF /* RepositoryDetailsCoordinator.swift in Sources */,
 				1D41ABCA266BF44F001226FF /* AppDelegate.swift in Sources */,
 				1D41ABD4266BF44F001226FF /* GitHub.xcdatamodeld in Sources */,
+				1D41AC3C266C3D0B001226FF /* RepositoryDetailsInteractor.swift in Sources */,
+				1D41AC41266C3D1E001226FF /* RepositoryDetailsPresenter.swift in Sources */,
+				1D41AC37266C3CF8001226FF /* RepositoryDetailsViewController.swift in Sources */,
 				1D41ABCC266BF44F001226FF /* SceneDelegate.swift in Sources */,
 				1D41AC0A266BF86F001226FF /* HomeFactory.swift in Sources */,
 				1D41AC19266BF8F7001226FF /* HomeService.swift in Sources */,

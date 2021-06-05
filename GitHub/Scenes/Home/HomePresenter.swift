@@ -11,6 +11,7 @@ protocol HomePresenting {
     var viewController: HomeDisplaying? { get set }
     func presentRepositories()
     func presentError()
+    func presentDetails(repositoryId: Int)
 }
 
 final class HomePresenter {
@@ -31,5 +32,9 @@ extension HomePresenter: HomePresenting {
     
     func presentRepositories() {
         viewController?.updateDataSource()
+    }
+    
+    func presentDetails(repositoryId: Int) {
+        coordinator.perform(action: .details(repositoryId: repositoryId))
     }
 }
