@@ -9,12 +9,15 @@ import UIKit
 
 // se uma classe possui somente métodos estaticos, ela pode virar um enum
 // Ela constroi o fluxo
+// weak - diz que o objeto vai ser uma referencia fraca na memoria. possibilita o ARC(Automatic Reference Counting) de limpar da memoria quando nao esta mais
+// sendo usada.
 
 enum HomeFactory {
     static func make() -> UIViewController {
-        let coordinator = HomeCoordinator()
-        let presenter = HomePresenter(coordinator: coordinator)
-        let interactor = HomeInteractor(presenter: presenter)
+        let coordinator: HomeCoordinating = HomeCoordinator()
+        let presenter: homePresenting = HomePresenter(coordinator: coordinator)
+        let service: HomeServicing = HomeService()
+        let interactor: HomeInteracting = HomeInteractor(presenter: presenter, service: service)
         let viewController = HomeViewController(interactor: interactor)
         
         presenter.viewController = viewController

@@ -7,13 +7,21 @@
 
 import Foundation
 
-class HomePresenter {
+protocol homePresenting {
+    
+}
+
+final class HomePresenter {
     // Responsavel pela formatacao da viewController, diz como deve ser apresentado
     
-    var viewController: HomeViewController?
-    var coordinator: HomeCoordinator
+    weak var viewController: HomeViewController?
+    private let coordinator: HomeCoordinator
     
     init(coordinator: HomeCoordinator) {
         self.coordinator = coordinator
     }
+}
+
+extension HomePresenter: homePresenting {
+    
 }

@@ -8,12 +8,20 @@
 import Foundation
 // Responsavel pelas regras de negocio, conexao com servico, dizer quando deve ser apresentado
 
-class HomeInteractor {
-    var presenter: HomePresenter
-    var service: HomeService
+protocol HomeInteracting {
     
-    init(presenter: HomePresenter, service: HomeService) {
+}
+
+final class HomeInteractor {
+    private let presenter: homePresenting
+    private let service: HomeServicing
+    
+    init(presenter: homePresenting, service: HomeServicing) {
         self.presenter = presenter
         self.service = service
     }
+}
+
+extension HomeInteractor: HomeInteracting {
+    
 }

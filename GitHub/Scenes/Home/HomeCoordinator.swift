@@ -8,7 +8,14 @@
 import UIKit
 
 // controla a navegacao da view com as proximas views
+protocol HomeCoordinating {
+    
+}
 
-class HomeCoordinator {
-    var viewController: UIViewController?
+final class HomeCoordinator {
+    weak var viewController: UIViewController?
+}
+
+extension HomeCoordinator: HomeCoordinating {
+    
 }

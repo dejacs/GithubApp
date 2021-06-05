@@ -7,6 +7,14 @@
 
 import Foundation
 
-class HomeService {
+protocol HomeServicing {
+    
+}
+
+final class HomeService {
+    
+}
+
+extension HomeService: HomeServicing {
     
 }

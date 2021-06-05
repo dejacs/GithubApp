@@ -16,11 +16,16 @@ import UIKit
 // internal - pode ser acessado somente dentro do modulo
 // public - pode ser acessado mas nao herdado e sobrescrito em qualquer lugar
 // private - pode ser acessado somente dentro da classe
+// final - não pode ser herdada
 
-class HomeViewController: UIViewController {
-    private let interactor: HomeInteractor
+protocol HomeDisplaying {
     
-    init(interactor: HomeInteractor) {
+}
+
+final class HomeViewController: UIViewController {
+    private let interactor: HomeInteracting
+    
+    init(interactor: HomeInteracting) {
         self.interactor = interactor
         super.init(nibName: nil, bundle: nil)
     }
@@ -46,4 +51,8 @@ class HomeViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         print("viewDidDisappear") // 6# depois que a tela sumiu
     }
+}
+
+extension HomeViewController: HomeDisplaying {
+    
 }
