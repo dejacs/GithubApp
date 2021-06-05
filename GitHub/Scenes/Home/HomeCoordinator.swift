@@ -9,7 +9,7 @@ import UIKit
 
 // controla a navegacao da view com as proximas views
 protocol HomeCoordinating {
-    
+    var viewController: UIViewController? { get set }
 }
 
 final class HomeCoordinator {

@@ -7,21 +7,29 @@
 
 import Foundation
 
-protocol homePresenting {
-    
+protocol HomePresenting {
+    var viewController: HomeDisplaying? { get set }
+    func presentRepositories()
+    func presentError()
 }
 
 final class HomePresenter {
     // Responsavel pela formatacao da viewController, diz como deve ser apresentado
     
-    weak var viewController: HomeViewController?
-    private let coordinator: HomeCoordinator
+    weak var viewController: HomeDisplaying?
+    private let coordinator: HomeCoordinating
     
-    init(coordinator: HomeCoordinator) {
+    init(coordinator: HomeCoordinating) {
         self.coordinator = coordinator
     }
 }
 
-extension HomePresenter: homePresenting {
+extension HomePresenter: HomePresenting {
+    func presentError() {
+        
+    }
     
+    func presentRepositories() {
+        viewController?.updateDataSource()
+    }
 }
